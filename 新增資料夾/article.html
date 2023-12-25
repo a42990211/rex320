@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>個人資訊頁面</title>
+  <style>
+    /* 初始樣式 */
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    #profile {
+      margin-top: 20px;
+    }
+
+    #avatar {
+      border-radius: 50%;
+    }
+
+    /* 按鈕樣式 */
+    .btn {
+      padding: 10px;
+      margin: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="profile">
+    <h2 id="studentId">學號: 41118136</h2>
+    <h2 id="studentName">姓名: 蔡丞哲</h2>
+    <img id="avatar" src="C:\Users\user\Desktop\新增資料夾\IMG_2739.webp" alt="c:\Users\user\Desktop\新增資料夾\123 - 捷徑.lnk">
+    <br>
+    <button class="btn" onclick="adjustText()">調整字體和顏色</button>
+    <button class="btn" onclick="adjustAvatar()">調整大頭照</button>
+    <button class="btn" onclick="changeImage()">換圖</button>
+  </div>
+
+  <script>
+    function adjustText() {
+      var studentId = document.getElementById("studentId");
+      var studentName = document.getElementById("studentName");
+
+      // 調整字體和顏色
+      studentId.style.fontFamily = "Times New Roman";
+      studentName.style.fontFamily = "Times New Roman";
+      studentId.style.color = "blue";
+      studentName.style.color = "green";
+    }
+
+    function adjustAvatar() {
+      var avatar = document.getElementById("avatar");
+
+      // 調整大頭照為圓邊、紅色粗框
+      avatar.style.border = "2px solid red";
+      avatar.style.borderRadius = "50%";
+    }
+
+    function changeImage() {
+      var avatar = document.getElementById("avatar");
+
+      // 換圖
+      avatar.src="life_photo.jpg";
+    }
+  </script>
+
+</body>
+</html>
